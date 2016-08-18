@@ -26,9 +26,9 @@ module Paperclip
         @sftp ||= Net::SFTP.start(
           @sftp_options[:host],
           @sftp_options[:user],
-          password: @sftp_options[:password],
-          port: @sftp_options[:port],
-          keys: @sftp_options[:keys]
+          :password => @sftp_options[:password],
+          :port => @sftp_options[:port],
+          :keys => @sftp_options[:keys]
         )
       end
 
